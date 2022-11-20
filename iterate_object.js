@@ -20,3 +20,4 @@ for(let key in person)
 {
     console.log(`\n\t${key}:${person[key]}`);
 }
+
