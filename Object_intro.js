@@ -4,7 +4,8 @@ const person ={
     hobbies:["guitar","sleeping"]
 
 }
-// console.log(person.hobbies);
+console.log(person.hobbies);
+
 
 person.gender="male";
 // console.log(person ); 
