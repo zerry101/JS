@@ -7,3 +7,4 @@ const bandName=band.bandName;
 const famousSong=band.famousSong;
 // bandName="queen";
 console.log(bandName,famousSong);
+// ==============================
