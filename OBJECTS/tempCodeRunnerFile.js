@@ -1,5 +1,3 @@
 
-// for(let key of Object.keys(person))
-// {
-//     console.log(person[key]);
-// }
+// const {bandName,famousSong} = band;
+// console.log(bandName);
