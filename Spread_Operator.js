@@ -7,3 +7,6 @@ console.log(arr);
 // ... spread an element consisting multiple elements refer below example 
 const newarr=[..."abcdefgh"];
 console.log(newarr);
+
+const arr1=[1];
+console.log(...arr1);
