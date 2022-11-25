@@ -1,6 +1,8 @@
 const band={
     bandName:"led Zepplin",
     famousSong:"stairway to heaven",
+    year:1987,
+    anotherFamousSong:"kashmir"
 };
 
 // const bandName=band.bandName;
@@ -10,9 +12,10 @@ const band={
 // console.log(bandName);
 
 
-const {bandName,famousSong} = band;
+const {bandName,famousSong,...restProps} = band;
 console.log(bandName);
-
+console.log(restProps);
 // assigning bandName variable value into var1 comment above two line code then run this 
-const {bandName:var1,famousSong:var2}=band;
+const {bandName:var1,famousSong:var2}=  band;
 console.log(var1);
+
