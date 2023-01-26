@@ -26,14 +26,26 @@ function BanckAccount(customerName, Balance) {
 
 const accountForm = document.querySelector("#accountForm");
 const customerName=document.querySelector("#customerName");
-const balance = document.querySelector("#balance");
+const balance =document.querySelector("#balance");
+const depositForm=document.querySelector("#depositForm");
+const custaccountNumber=document.querySelector("#accountNumber");
+const custAccountAmount=document.querySelector('#amount');
 
 const accounts=[];
 
 accountForm.addEventListener('submit',(e)=>{
     e.preventDefault();
     console.log(customerName.value,balance.value);
-    const account = new BanckAccount(customerName.value,balance.value);
+    const account = new BanckAccount(customerName.value,Number(balance.value));
     accounts.push(account);
 })
 console.log(accounts);
+
+depositForm.addEventListener('submit',(e)=>{
+  e.preventDefault();   
+       custDepoAccount= accounts.find(a=>a.accountNumber==custaccountNumber.value);
+       custDepoAccount.deposit(Number(custAccountAmount.value));
+       console.log(custDepoAccount);
+       console.log(custDepoAccount.Balance);
+})
+
