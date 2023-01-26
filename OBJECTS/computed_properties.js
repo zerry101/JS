@@ -10,7 +10,7 @@ const person = {
   const value1 = "myvalue1";
   const value2 = "myvalue2";
 
-  const obj = {
+  const obj = { 
     [key1]:value1,
     [key2]:value2
   }
