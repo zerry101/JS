@@ -3,20 +3,13 @@
 
 
 
-const accountNumber=function(length){
-    characters1="ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-    characters2="0123456789"
-    
-    let result1='';
-    let result2='';
-    for(i=0;i<length/2;i++)
-    {
-       result1+=characters1.charAt(Math.floor(Math.random()*characters1.length));
-       result2+=characters2.charAt(Math.floor(Math.random()*characters2.length));
-    }
+const generatedAccountNumber = (length) => {
+    let availableChars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
 
-    // console.log(Math.random()*characters.length);
-    return result1+result2;
+    let accountNumber = '';
+    for (i = 0; i < length; i++)
+        accountNumber += availableChars.charAt(Math.floor(Math.random() * availableChars.length));
+    return accountNumber;
 }
 
-console.log(accountNumber(8));
+console.log(generateAccountNumber(8));

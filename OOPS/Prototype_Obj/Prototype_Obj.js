@@ -1,6 +1,6 @@
 function BanckAccount(customerName, Balance) {
   this.customerName = customerName;
-  this.accountNumber = Date.now();
+  this.accountNumber = 0;
   this.Balance = Balance;
   // deposit function
   // deposit function will not be executed automatically it will be only  executed  by calling
@@ -25,6 +25,15 @@ BanckAccount.prototype.deposit = function (amount) {
 BanckAccount.prototype.withdraw = function (amount) {
   this.Balance -= amount;
 };
+
+BanckAccount.prototype.generatedAccountNumber = function (length) {
+  let availableChars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+
+  let randomString = '';
+  for (i = 0; i < length; i++)
+    randomString += availableChars.charAt(Math.floor(Math.random() * availableChars.length));
+  this.accountNumber+=randomString;
+}
 /**above withdraw method will not consume memory in every object rather will consume memory of only 
  BankAccount function this prototype code will be sharable among each object for data manipulation 
  with no memory consumption **/
@@ -46,6 +55,7 @@ accountForm.addEventListener("submit", (e) => {
   e.preventDefault();
   console.log(customerName.value, balance.value);
   const account = new BanckAccount(customerName.value, Number(balance.value));
+  account.generatedAccountNumber(8);
   accounts.push(account);
 });
 console.log(accounts);
