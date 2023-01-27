@@ -28,9 +28,11 @@ const accountForm = document.querySelector("#accountForm");
 const customerName=document.querySelector("#customerName");
 const balance =document.querySelector("#balance");
 const depositForm=document.querySelector("#depositForm");
-const custaccountNumber=document.querySelector("#accountNumber");
-const custAccountAmount=document.querySelector('#amount');
-
+const custaccountNumber=document.querySelector("#depoAccountNumber");
+const depoAmount=document.querySelector('#depoAmount');
+const withdrawAccountNumber=document.querySelector("#withdrawAccountNumber");
+const withdrawAmount=document.querySelector("#withdrawAmount");
+const withdrawForm=document.querySelector("#withdrawForm");
 const accounts=[];
 
 accountForm.addEventListener('submit',(e)=>{
@@ -43,9 +45,18 @@ console.log(accounts);
 
 depositForm.addEventListener('submit',(e)=>{
   e.preventDefault();   
-       custDepoAccount= accounts.find(a=>a.accountNumber==custaccountNumber.value);
-       custDepoAccount.deposit(Number(custAccountAmount.value));
+       custDepoAccount= accounts.find(a=>a.accountNumber==depoAccountNumber.value);
+       custDepoAccount.deposit(Number(depoAmount.value));
        console.log(custDepoAccount);
        console.log(custDepoAccount.Balance);
 })
 
+
+withdrawForm.addEventListener('submit',(e)=>{
+  e.preventDefault();
+  const custWithdrawAccount=accounts.find( a=>a.accountNumber==withdrawAccountNumber.value);
+  custWithdrawAccount.withdraw(Number(withdrawAmount.value));
+  console.log(custWithdrawAccount);
+  console.log(custWithdrawAccount.Balance);
+
+})
