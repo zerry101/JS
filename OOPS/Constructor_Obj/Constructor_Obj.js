@@ -8,9 +8,15 @@ function BanckAccount(customerName, Balance) {
   this.deposit = (amount) => {
     this.Balance += amount;
   };
+
+  /**above deposit method will  consume memory in every object  **/
+
   this.withdraw = (amount) => {
     this.Balance -= amount;
   };
+
+  /**above withdraw method will  consume memory in every object  **/
+
 }
 
 // const zaccount=new BanckAccount('z',102);//This object will take different Memory and data
