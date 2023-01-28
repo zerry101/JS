@@ -23,15 +23,20 @@ class BankAccount {
 
 class CurrentAccount extends BankAccount{
     transactionLimit;
+    takePersonalLoan;
  constructor(customerName,balance=0,list)
  {
     super(customerName,balance) ;
     this.transactionLimit=10000;
+    this.takePersonalLoan=(amount)=>{
+        console.log(`You will recieve of  ${amount}  of personal loan`);
+    }
  }   
  
 }
 
 const rakeshAccount=new CurrentAccount('rk',3000);
+rakeshAccount.takePersonalLoan(30000);
 console.log(rakeshAccount);
 
 
