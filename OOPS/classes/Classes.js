@@ -23,6 +23,8 @@ class BankAccount {
     // In class we pass Input parameters in constructor
     // In class hoisting will not work
     // Hoisting means calling of function or making object before declaration see below commented code
+
+    
     /** hello()
      * function hello(){
      * console.log("hello");
