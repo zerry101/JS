@@ -58,6 +58,8 @@ depositForm.addEventListener('submit',(e)=>{
 })
 
 
+
+
 withdrawForm.addEventListener('submit',(e)=>{
   e.preventDefault();
   const custWithdrawAccount=accounts.find( a=>a.accountNumber==withdrawAccountNumber.value);
