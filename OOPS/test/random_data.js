@@ -57,7 +57,7 @@ function generateRandomData(rows) {
 }
 
 // Generate 10,000 rows of random JSON data
-const jsonData = generateRandomData(10000);
+const jsonData = generateRandomData(1000000);
 
 // Save the JSON data to file
 const filePath = './output.json';
