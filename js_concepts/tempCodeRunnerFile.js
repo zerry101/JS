@@ -1,1 +1,1 @@
-console.log(p1);
+10
