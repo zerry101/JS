@@ -1,9 +1,14 @@
-function sum(){
+function sum(name,course,...args){
     let sum=0;
-    for(i in arguments){
-        sum+=arguments[i];
+for(i in args){
+        sum+=args[i];
     }
 return sum;
+
+// return arguments;
+
 }
 
-console.log(sum(10,10,20,20));
+console.log(sum('zishan','',45,54,46));
+console.log(sum('ya','btech',54,57,43));
+
