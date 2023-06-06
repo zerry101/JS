@@ -1,5 +1,7 @@
 
 // nn  bb ss u 
+// Primitive datatypes in js
+
 let a= null;
 let b=345;
 let c=true;
