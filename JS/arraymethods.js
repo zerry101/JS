@@ -87,3 +87,5 @@ console.log(arr2.sort(compare2));
 console.log("this is slice ");
 console.log(arr1.slice(3));//returns element from third index to end   
 console.log(arr1.slice(1,3));//gives element from zeroth zeroth index to second index 
+
+
