@@ -16,11 +16,10 @@ console.log(squaredarray);
 
 const elearr=[1,2,3,4,5,6,7,8,9,10];
 
-newarr=elearr.slice(0,6);
+newarr=elearr.slice(0,6); 
 
 factarr=elearr.reduce((accumulator,element)=>{
     return accumulator*element;
 })
-
 console.log(factarr);
 console.log(newarr);
