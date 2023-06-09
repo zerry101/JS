@@ -3,7 +3,7 @@
 
 // Simple Callback 
 
-simpfunc=(arg1,arg2,callback)=>{
+simpfunc=(arg1,arg2,callback )=>{
 
     // console.log(arg1);
 
