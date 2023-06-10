@@ -72,15 +72,18 @@
 // })
 
 
-let p4=new Promise((reject,resolve)=>{
+let p4 = new Promise((reject, resolve) => {
 
-    // resolve('resolve here');
-    reject('reject here');
 
-}).then((res)=>{
-    console.log(res+"then");
-}).catch((res)=>{
-    console.log(res+"catch");
+    // resolve(new Error('jkjk'));
+    resolve(new Error('jkjk'));
+
+})
+
+p4.then((res) => {
+    console.log(res + "then");
+}).catch((reason) => {
+    console.log(reason + "catch");
 });
 
 console.log(p4);
