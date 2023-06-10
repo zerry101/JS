@@ -70,3 +70,21 @@
 // }).then((data) => {
 //     console.log(data);
 // })
+
+
+let p4=new Promise((reject,resolve)=>{
+
+    // resolve('resolve here');
+    reject('reject here');
+
+}).then((res)=>{
+    console.log(res+"then");
+}).catch((res)=>{
+    console.log(res+"catch");
+});
+
+console.log(p4);
+
+
+
+// console.log(greet);

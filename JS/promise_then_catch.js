@@ -1,6 +1,6 @@
 
 
-name = 'zishan';
+name = 'ishan';
 
 let p = new Promise((resolve, reject) => {
     setTimeout(() => {
@@ -9,26 +9,27 @@ let p = new Promise((resolve, reject) => {
     }, 2000);
 })
 let p1 = new Promise((resolve, reject) => {
-    setTimeout(() => {
-        name.charAt(0) == 'z' ? resolve('yes') : reject(45);
+    // setTimeout(() => {
+    //     name.charAt(0) == 'z' ? resolve('yes') : reject(45);
 
-    }, 2000);
+    // }, 2000);
+
+    // resolve('yes');
+    reject('No');
+
 })
 
 p.then((res) => {
     console.log(res);
-});
+}).catch((res)=>{
+    console.log(res);
+})
 p1.then((res) => {
-    console.log(res);
+    console.log(res+'then block');
+}).catch((res)=>{
+    console.log(res+'catch block');
 });
 
-
-p.catch((res) => {
-    console.log(res);
-}, console.error(Error))
-p1.catch((res) => {
-    console.log(res);
-}, console.error(Error))
 
 console.log(p, p1);
 
