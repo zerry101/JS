@@ -72,21 +72,31 @@
 // })
 
 
-let p4 = new Promise((reject, resolve) => {
+let promise13 = new Promise((resolve, reject) => {
+let a=4,b=4;
+let c=a+b;
+ 
 
 
+c==8?resolve(c+" yes it is 8"):reject(c+'no it is not 8');
     // resolve(new Error('jkjk'));
-    resolve(new Error('jkjk'));
 
 })
 
-p4.then((res) => {
-    console.log(res + "then");
-}).catch((reason) => {
-    console.log(reason + "catch");
-});
+promise13.then((res) => {
+    console.log(res + "1st then");
 
-console.log(p4);
+    return new Promise((resolve,reject)=>{reject(78), resolve(res) ,reject(78);});
+}).catch((res)=>{
+    console.log(res+"1st catch");
+    return new Promise((resolve,reject)=>{resolve(res) ;});
+}).then((data)=>{
+    console.log(data+'2nd then');
+}).catch((data)=>{
+    console.log(data+'2nd catch');
+})
+
+console.log(promise13);
 
 
 
