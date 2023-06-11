@@ -1,2 +1,1 @@
-    // console.log(bw);
-    // console.log(dw);
+print();
