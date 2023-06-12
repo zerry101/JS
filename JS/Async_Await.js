@@ -22,12 +22,11 @@ async function fun(resolve) {
 
     })
 
-    console.log('initiating dw');
+    // console.log('initiating dw');
     let dw = await delhiWeather;
-    
-    console.log(typeof(dw));
+        // console.log(typeof(dw));
     let bw = await bangaloreWeather;
-    console.log(' bw is has been fetched successfully');
+    // console.log(' bw is has been fetched successfully');
 
     // console.log(bw);
     // console.log(dw);
@@ -40,9 +39,17 @@ async function fun(resolve) {
 
 
 
+let response= fun();
+
+ response.then(async(data)=>{
+    console.log(data);
+    console.log('above is response');
+    let res=await fun();
+    console.log(res);
+})
 async function print(){
     let  ans = await fun();
-
+// console.log(ans);
 
     // console.log(ans);
     // console.log(await fun()+'answer is here');
