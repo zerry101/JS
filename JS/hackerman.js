@@ -15,7 +15,7 @@ async function hack() {
 
     let ans = await p;
     console.log(ans);
-    ans = await p2;
+    ans = await p2; 
     console.log(ans);
 }
 

@@ -22,3 +22,4 @@ let promise_any=Promise.any([p1,p2,p3]);
 promise_any.then((res)=>{
     console.log(res);
 })
+

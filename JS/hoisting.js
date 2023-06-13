@@ -9,6 +9,6 @@ function greet(){
 var a=1;
 const  t=1;
 console.log(a);
-// let b=1;
+// let b=1; 
 
 // hoist dont works with arrow functions , let ,const
