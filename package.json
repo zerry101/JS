@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "node-fetch": "^2.6.11",
     "pdf-node": "^1.0.1"
   }
 }

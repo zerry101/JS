@@ -1,2 +1,1 @@
-
-             randomrequiredcharacters="";
+map
