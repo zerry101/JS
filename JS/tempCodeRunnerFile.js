@@ -1,3 +1,1 @@
-for (let val of obj){
-    console.log(val);
-}
+4,5,6,7,8
