@@ -20,3 +20,21 @@ for(let i of num){
 for(let i in num){
     console.log(i);
 }
+
+obj={
+    name:"zishan",
+    age:21,
+    rollno:95
+
+}
+
+for (let key in obj){
+    console.log(key);
+}
+
+arr=[1,2,3,4,5,];
+for(let val of arr){
+    console.log(val);
+}
+
+console.log(`Hii `);
