@@ -58,3 +58,4 @@ console.log(squearedArr);
 console.log(evenArr);
 console.log('---foreach--below----');
 console.log(total);
+console.log(arr.reverse());
