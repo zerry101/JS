@@ -108,24 +108,39 @@ obj.__proto__ = obj2;
 console.log(obj);
 console.log(obj.address);
 console.log('the name is' + obj2.objName);
-obj2.newName='daze';
+obj2.newName = 'daze';
 console.log('the name is' + obj2.objName);
 console.log(obj2.__proto__);
-console.log(obj.__proto__ );
+console.log(obj.__proto__);
 
-const obj5={a:1,b:2};
-const {a,b}=obj5;
+const obj5 = { a: 1, b: 2 };
+const { a, b } = obj5;
 
 console.log(a);
 
-const arr10=[1,7,11];
-const arr20=[...arr10];
+const arr10 = [1, 7, 11];
+const arr20 = [...arr10];
 console.log(arr20);
-(()=>{
+(() => {
     console.log('automatic');
 })();
 
-[x,y,...rest]=[10,20,30,40,50];
+[x, y, ...rest] = [10, 20, 30, 40, 50];
 console.log(x);
 console.log(y);
 console.log(rest);
+
+
+const fetch = require("node-fetch");
+
+
+let response = fetch('https://631945908e51a64d2be10770.mockapi.io/api/v1/allOrders',{method:"get"});
+let response1 = fetch('https://631945908e51a64d2be10770.mockapi.io/api/v1/allOrders',{method:"post"});
+response1.then((res)=>{
+    console.log(res);
+})
+response.then((data) => {
+    return data.json();
+}).then((data) => {
+    console.log(data);
+});
