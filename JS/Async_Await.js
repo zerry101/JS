@@ -1,4 +1,4 @@
-// an async function alwasy returns a promise
+// an async function always returns a promise
 
 // await helps us to get the value of async function or promise when it is fulfilled 
 // then will help you to show status of promise with its values 
